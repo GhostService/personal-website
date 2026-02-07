@@ -20,6 +20,7 @@
 
 .navbar a:hover {
   opacity: 0.7;
+  color: #4da3ff;
 }
 
 .hero {
@@ -52,4 +53,8 @@ h1 {
 p {
     font-size: 20px;
     margin: 16px;
+}
+
+a {
+    color: #f43535;
 }
