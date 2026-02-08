@@ -33,9 +33,13 @@
 }
 
 .hero img {
-  width: 200px;
+  width: min(200px, 40vw);
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 10px;
+  border: 8px solid rgba(237, 25, 25, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 body {
