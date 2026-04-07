@@ -23,6 +23,10 @@
   color: #4da3ff;
 }
 
+.navbar a.active {
+  color: #4da3ff;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
