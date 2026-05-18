@@ -24,10 +24,14 @@ style.css       — Global styles (shared by all pages)
 ## Conventions
 
 - Every page must include `<meta charset="UTF-8" />` and `<meta name="viewport" content="width=device-width, initial-scale=1.0" />` in `<head>`
-- Every page must include the same `<nav class="navbar">` block with links to all five pages
+- Every page must include `<meta name="description">`, `og:title`, `og:description`, `og:image`, `og:url`, and `og:type` meta tags for SEO and link previews
+- Every page must include the ghost emoji favicon: `<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👻</text></svg>" />`
+- Every page must include the same `<nav class="navbar">` block with links to all five pages; the current page's link gets `class="active"`
 - Every page links to `style.css` via `<link rel="stylesheet" href="style.css" />`
+- Every `<html>` tag must have `lang="en"`
 - Use `<main class="hero">` as the page content wrapper
 - Page titles follow the pattern `Page Name | Ghost's World` (or just `Ghost's World` for the home page)
+- The shared `og:image` is `https://cdn.hackclub.com/019e3238-f004-7153-a1fb-14d8ffd1ec8d/me1-1.png` (the avatar)
 
 ## Design
 
