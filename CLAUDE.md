@@ -13,7 +13,7 @@ Personal website for Liam (GhostYT7582) to showcase projects, share links, and d
 ## File structure
 
 ```
-index.html      — Home / landing page
+index.html      — Home / landing page (avatar + taglines)
 about.html      — About me
 projects.html   — Projects showcase
 socials.html    — Contact / socials links
@@ -23,6 +23,7 @@ style.css       — Global styles (shared by all pages)
 
 ## Conventions
 
+- Every page must include `<meta charset="UTF-8" />` and `<meta name="viewport" content="width=device-width, initial-scale=1.0" />` in `<head>`
 - Every page must include the same `<nav class="navbar">` block with links to all five pages
 - Every page links to `style.css` via `<link rel="stylesheet" href="style.css" />`
 - Use `<main class="hero">` as the page content wrapper
@@ -36,6 +37,19 @@ style.css       — Global styles (shared by all pages)
 - Link color: `#f43535`
 - Font: Arial, sans-serif
 - Keep the aesthetic minimal and dark
+
+## Responsive design
+
+The site is mobile-first responsive. Key rules in `style.css`:
+
+- `.hero` has `max-width: 720px`, `margin: auto`, and `padding: 0 20px` to center content and prevent edge bleed on all screen sizes
+- `h1` uses `clamp(26px, 6vw, 48px)` — scales fluidly between mobile and desktop
+- `p` uses `clamp(15px, 2.5vw, 20px)` and has a `max-width: 600px` for readability
+- `.navbar` uses `flex-wrap: wrap` so links wrap gracefully on narrow screens
+- `.hero .avatar` uses `clamp(120px, 30vw, 200px)` so it scales down on mobile
+- A `@media (max-width: 480px)` breakpoint tightens navbar padding and reduces top margin
+
+When adding new styles, follow the existing responsive patterns — use `clamp()` for font/size values and avoid fixed pixel sizes that would break on small screens.
 
 ## Deployment
 
